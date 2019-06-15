@@ -2,28 +2,28 @@
 var totalPriceArray = []; //Only global variable in code
 function Order (customSize, cheese) {
   this.customSize = customSize;
-  this.sauce = 1;
+  this.sauce = 100;
   this.cheese = cheese;
-  this.veggie1 = 1;
-  this.veggie2 = 1;
-  this.meat = 2;
+  this.veggie1 = 100;
+  this.veggie2 = 100;
+  this.meat = 200;
   this.pizzaPrice = 0;
-  this.sidePrice = 3;
+  this.sidePrice = 300;
 }
 Order.prototype.pizzaCost = function () {
   if (this.customSize === "Small 10 in.") {
-    this.pizzaPrice += 6;
+    this.pizzaPrice += 60;
   } else if (this.customSize === "Medium 14 in.") {
-    this.pizzaPrice += 9;
+    this.pizzaPrice += 90;
   } else if (this.customSize === "Large 18 in.") {
-    this.pizzaPrice += 12;
+    this.pizzaPrice += 120;
   }
   if (this.cheese === "cheese") {
-    this.pizzaPrice += 1;
+    this.pizzaPrice += 100;
   } else if (this.cheese === "light cheese") {
-    this.pizzaPrice += 0.5;
+    this.pizzaPrice += 50;
   } else if (this.cheese === "extra cheese") {
-    this.pizzaPrice += 1.5;
+    this.pizzaPrice += 15;
   }
   this.pizzaPrice += this.sauce;
   this.pizzaPrice += this.veggie1;
@@ -68,7 +68,7 @@ $(document).ready(function(event) {
     var city = $("input#city-add").val();
     var state = $("select#state-select").val();
     var zipcode = $("input#zip-add").val();
-    var newAddress = new Address(streetAddress, city, state, zipcode)
+    var newAddress = new Address(streetAddress, city, constituency, zipcode)
     $("#order-content").show();
     $("#landing-content").hide();
     $("#delivery-option").text("DELIVER TO: " + newAddress.deliveryAddress);
