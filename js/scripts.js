@@ -41,12 +41,12 @@ Order.prototype.finalCost = function () {
   }
   return cartTotalPrice;
 }
-function Address (streetAddress, city, state, zipcode) {
+function Address (streetAddress, city, constituency, houseNumber) {
   this.streetAddress = streetAddress;
   this.city = city;
-  this.state = state;
-  this.zipcode = zipcode;
-  this.deliveryAddress = (streetAddress + "  " + city + ", " + state + "  " + zipcode);
+  this.constituency = constituency;
+  this.houseNumber = houseNumber;
+  this.deliveryAddress = (streetAddress + "  " + city + ", " + constituency+ "  " + houseNumber);
 }
 
 
