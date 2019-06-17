@@ -66,9 +66,9 @@ $(document).ready(function(event) {
     event.preventDefault();
     var streetAddress = $("input#street-add").val();
     var city = $("input#city-add").val();
-    var state = $("select#state-select").val();
-    var zipcode = $("input#zip-add").val();
-    var newAddress = new Address(streetAddress, city, constituency, zipcode)
+    var constituency = $("select#constituency-select").val();
+    var houseNumber = $("input#house-add").val();
+    var newAddress = new Address(streetAddress, city, constituency, houseNumber)
     $("#order-content").show();
     $("#landing-content").hide();
     $("#delivery-option").text("DELIVER TO: " + newAddress.deliveryAddress);
