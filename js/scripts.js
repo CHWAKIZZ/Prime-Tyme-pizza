@@ -12,18 +12,18 @@ function Order (customSize, cheese) {
 }
 Order.prototype.pizzaCost = function () {
   if (this.customSize === "Small 10 in.") {
-    this.pizzaPrice += 60;
+    this.pizzaPrice += 600;
   } else if (this.customSize === "Medium 14 in.") {
-    this.pizzaPrice += 90;
+    this.pizzaPrice += 900;
   } else if (this.customSize === "Large 18 in.") {
-    this.pizzaPrice += 120;
+    this.pizzaPrice += 1200;
   }
   if (this.cheese === "cheese") {
     this.pizzaPrice += 100;
   } else if (this.cheese === "light cheese") {
     this.pizzaPrice += 50;
   } else if (this.cheese === "extra cheese") {
-    this.pizzaPrice += 15;
+    this.pizzaPrice += 150;
   }
   this.pizzaPrice += this.sauce;
   this.pizzaPrice += this.veggie1;
